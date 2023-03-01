@@ -1,0 +1,38 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
+using System.Web;
+
+namespace WebApplication1.Data
+{
+    public class WebApplication1Context : DbContext
+    {
+        // You can add custom code to this file. Changes will not be overwritten.
+        // 
+        // If you want Entity Framework to drop and regenerate your database
+        // automatically whenever you change your model schema, please use data migrations.
+        // For more information refer to the documentation:
+        // http://msdn.microsoft.com/en-us/data/jj591621.aspx
+    
+        public WebApplication1Context() : base("name=WebApplication1Context")
+        {
+        }
+
+        public System.Data.Entity.DbSet<WebApplication1.Models.Student> Students { get; set; }
+
+        public System.Data.Entity.DbSet<WebApplication1.Models.Professor> Professors { get; set; }
+
+        public System.Data.Entity.DbSet<WebApplication1.Models.Account> Accounts { get; set; }
+
+        public System.Data.Entity.DbSet<WebApplication1.Models.Section> Sections { get; set; }
+
+        public System.Data.Entity.DbSet<WebApplication1.Models.SectionProfesseur> SectionProfesseurs { get; set; }
+
+        public System.Data.Entity.DbSet<WebApplication1.Models.Subject> Subjects { get; set; }
+
+        public System.Data.Entity.DbSet<WebApplication1.Models.SubjectProfessor> SubjectProfessors { get; set; }
+
+        public System.Data.Entity.DbSet<WebApplication1.Models.Note> Notes { get; set; }
+    }
+}
